@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import firebaseApp from "../firebase";
+import { async } from "@firebase/util";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -8,10 +11,25 @@ const Login = (props) => {
   const [passwordError, setPasswordError] = useState("");
 
   const navigate = useNavigate();
+  const auth = getAuth(firebaseApp);
+
+  const handleSignIn = async () => {
+    try {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log('User signed in')
+        })
+    } catch (error) {
+      console.error('error signing up: ', error.message);
+    }
+  }
 
   const onButtonClick = () => {
     // You'll update this function later...
   };
+
+
 
   return (
     <div className={"mainContainer"}>
@@ -43,7 +61,7 @@ const Login = (props) => {
         <input
           className={"inputButton"}
           type="button"
-          onClick={onButtonClick}
+          onClick={handleSignIn}
           value={"Log in"}
         />
       </div>
