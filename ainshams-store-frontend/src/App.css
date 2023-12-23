@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .mainContainer {
   flex-direction: column;
   display: flex;
@@ -49,7 +50,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 260px;
+  height: 50px;
 }
 
 .inputContainer {
@@ -59,7 +60,7 @@ body {
   justify-content: center;
 }
 
-.inputContainer > .errorLabel {
+.inputContainer>.errorLabel {
   color: red;
   font-size: 12px;
 }

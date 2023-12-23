@@ -8,6 +8,8 @@ import { ShopContextProvider } from "./context/shop-context";
 import { useEffect, useState } from "react";
 import Home from "./pages/home";
 import Login from "./pages/login";
+import Register from "./pages/register";
+
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
@@ -27,11 +29,8 @@ function App() {
                 />
               }
             />
-            <Route
-              path="/login"
-              element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />}
-            />
-
+            <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
+            <Route path="/register" element={<Register setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/shop" element={<Shop />} />
