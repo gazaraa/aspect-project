@@ -12,9 +12,11 @@ public class Product {
     private long id;
     private String name;
     private String price;
-    private byte[] image;
+    private String image;
 
-    public Product(String name,String price, byte[] image){
+    public Product(){}
+
+    public Product(String name,String price, String image){
         this.name = name;
         this.price = price;
         this.image = image;
@@ -44,11 +46,11 @@ public class Product {
         this.price = price;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import AddProductForm from "./pages/addProductForm";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -29,6 +30,7 @@ function App() {
                 />
               }
             />
+            <Route path="/addProduct" element={<AddProductForm />} />
             <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
             <Route path="/register" element={<Register setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
             <Route path="/contact" element={<Contact />} />
