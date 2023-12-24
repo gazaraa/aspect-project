@@ -3,6 +3,7 @@
   text-align: center;
   font-size: 40px;
 }
+
 .products {
   width: 100%;
   height: auto;
@@ -24,6 +25,7 @@
 
 .product img {
   width: 400px;
+  max-height: 400px;
 }
 
 .product .description {
@@ -36,6 +38,7 @@
 }
 
 .addToCartBttn {
+  color: black;
   background-color: transparent;
   border: 2px solid rgb(19, 19, 19);
   min-width: 100px;

@@ -18,6 +18,24 @@ body {
   height: 100vh;
 }
 
+.Bttn {
+  color: rgb(14, 2, 93);
+  background-color: transparent;
+  border: 2px solid rgb(14, 2, 93);
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+
+.Bttn:hover {
+  background-color: rgb(14, 2, 93);
+  color: white;
+  cursor: pointer;
+}
+
 .titleContainer {
   display: flex;
   flex-direction: column;

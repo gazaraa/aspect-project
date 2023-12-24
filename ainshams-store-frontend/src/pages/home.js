@@ -6,15 +6,7 @@ const Home = (props) => {
   const { loggedIn, email } = props;
   const navigate = useNavigate();
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('http://localhost:8080/students');
 
-      console.log(response.data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
 
   const onButtonClick = () => {
   };
@@ -28,7 +20,7 @@ const Home = (props) => {
       <div className={"buttonContainer"}>
         <Link to="/login">
           <input
-            className={"inputButton"}
+            className={"Bttn"}
             type="button"
             onClick={null}
             value={loggedIn ? "Log out" : "Log in"}
@@ -39,21 +31,14 @@ const Home = (props) => {
       {loggedIn ? <div /> : <div className={"buttonContainer"}>
         <Link to="/register">
           <input
-            className={"inputButton"}
+            className={"Bttn"}
             type="button"
             onClick={null}
             value="Register"
           />
         </Link>
       </div>}
-      <div className={"buttonContainer"}>
-        <input
-          className={"inputButton"}
-          type="button"
-          onClick={fetchData}
-          value="GET"
-        />
-      </div>
+
 
     </div>
   );

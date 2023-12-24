@@ -18,7 +18,8 @@ const Login = (props) => {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log('User signed in')
+          console.log('User signed in');
+          navigate('/shop');
         })
     } catch (error) {
       console.error('error signing up: ', error.message);
