@@ -17,7 +17,8 @@ const Register = (props) => {
             await createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log('User signed up')
+                    console.log('User signed up');
+                    navigate('/shop');
                 })
         } catch (error) {
             console.error('Error signing up:', error.message);
@@ -56,7 +57,7 @@ const Register = (props) => {
             <br />
             <div className={"inputContainer"}>
                 <input
-                    className={"inputButton"}
+                    className={"Bttn"}
                     type="button"
                     onClick={handleSignUp}
                     value={"Register"}

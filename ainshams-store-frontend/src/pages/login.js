@@ -60,7 +60,7 @@ const Login = (props) => {
       <br />
       <div className={"inputContainer"}>
         <input
-          className={"inputButton"}
+          className={"Bttn"}
           type="button"
           onClick={handleSignIn}
           value={"Log in"}
