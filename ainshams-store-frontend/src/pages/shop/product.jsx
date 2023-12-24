@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+import axios from 'axios';
+
 
 export const Product = (props) => {
   const { id, name, price, image } = props.data;
@@ -28,7 +30,7 @@ export const Product = (props) => {
       <button className="addToCartBttn" onClick={() => addToCart(id)}>
         Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
       </button>
-      <button className="addToCartBttn" >Delete Product</button>
+      <button className="addToCartBttn" onClick={handleDelete} >Delete Product</button>
     </div>
   );
 };
