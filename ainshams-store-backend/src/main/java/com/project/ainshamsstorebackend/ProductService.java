@@ -20,6 +20,7 @@ public class ProductService {
     }
 
     public Optional<Product> getProductById(long id){
+
         return productRepo.findById(id);
     }
 
@@ -27,7 +28,7 @@ public class ProductService {
         Optional<Product> optionalProduct = productRepo.findById(id);
 
         if (!optionalProduct.isPresent()){
-            throw new Exception("Product with ID:"+id+" not found");
+            throw new CustomException("Product with ID:"+id+" not found");
         }
 
         Product product = optionalProduct.get();
@@ -42,7 +43,7 @@ public class ProductService {
         Optional<Product> optionalProduct = productRepo.findById(id);
 
         if (!optionalProduct.isPresent()){
-            throw new Exception("Product with ID:"+id+" not found");
+            throw new CustomException("Product with ID:"+id+" not found");
         }
 
         productRepo.deleteById(id);
